@@ -1,4 +1,5 @@
 import HeroSection from "../components/home/HeroSection";
+import TechnologySection from "../components/home/TechnologySection";
 import Navbar from "../components/layout/Navbar";
 
 const HomePage = () => {
@@ -11,6 +12,9 @@ const HomePage = () => {
 
                 {/* Hero section */}
                 <HeroSection/>
+
+                {/* Technologies section */}
+                <TechnologySection/>
 
             </main>
 
