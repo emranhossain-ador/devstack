@@ -1,3 +1,4 @@
+import StackPanel from "./StackPanel";
 import TechnologyCard from "./TechnologyCard";
 
 
@@ -8,11 +9,16 @@ const TechnologyGrid = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
                     <TechnologyCard/>
+                    <TechnologyCard/>
+                    <TechnologyCard/>
+                    <TechnologyCard/>
+                    <TechnologyCard/>
 
                 </div>
             </div>
             <div className="col-span-1">
 
+                <StackPanel/>
 
             </div>
         </div>
