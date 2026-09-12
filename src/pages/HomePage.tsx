@@ -1,3 +1,4 @@
+import HeroSection from "../components/home/HeroSection";
 import Navbar from "../components/layout/Navbar";
 
 const HomePage = () => {
@@ -5,6 +6,13 @@ const HomePage = () => {
         <>
             {/* Navbar   */}
             <Navbar/>
+
+            <main className="space-y-10 container mx-auto py-10 md:py-14 px-3">
+
+                {/* Hero section */}
+                <HeroSection/>
+
+            </main>
 
         </>
     );
