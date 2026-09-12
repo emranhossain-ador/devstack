@@ -1,5 +1,6 @@
 import HeroSection from "../components/home/HeroSection";
 import TechnologySection from "../components/home/TechnologySection";
+import Footer from "../components/layout/Footer";
 import Navbar from "../components/layout/Navbar";
 
 const HomePage = () => {
@@ -17,6 +18,8 @@ const HomePage = () => {
                 <TechnologySection/>
 
             </main>
+
+            <Footer/>
 
         </>
     );
