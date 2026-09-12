@@ -1,0 +1,49 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@import "tailwindcss";
+
+
+@theme {
+  --font-sans: "Open Sans", sans-serif;
+  --font-header: "Montserrat", sans-serif;
+
+  --color-body: oklch(0.9824 0.0013 286.3757);
+  --color-card: #fff;
+  --color-border: #eee;
+  --color-foreground: oklch(0.3211 0 0);
+  --color-primary: #E91E8C;
+
+}
+
+
+@layer components{
+  *{
+    margin: 0;
+  }
+
+  body{
+    background-color: var(--color-body);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .gradient-text {
+      background: linear-gradient(
+          90deg,
+          #FF512F,
+          #E91E8C,
+          #8B2CF5
+      );
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+
+  .navLink{
+    @apply px-1.5 py-1 cursor-pointer font-semibold text-[15px] transition-all hover:text-primary;
+  }
+
+}
