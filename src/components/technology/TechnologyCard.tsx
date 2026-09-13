@@ -1,31 +1,52 @@
 import { FaStar } from "react-icons/fa";
-import ReactLogo from "../../assets/images/react.png"
+import type { TechnologyType } from "../../TechnologyType";
+import TechnologyIcon from "./TechnologyIcon";
+import TBadgeTypeColor from "./TBadgeTypeColor";
 
 
-const TechnologyCard = () => {
+
+interface TechnologyProps{
+    technology: TechnologyType
+    handleAddToStack: (id:number) => void
+    selected:boolean;
+}
+
+const TechnologyCard = ({technology, selected, handleAddToStack}:TechnologyProps) => {
+
+    const color = TBadgeTypeColor({color:technology.badgeType});
+    // console.log(color);
+
     return (
-        <div className="border border-border bg-white rounded-2xl overflow-hidden p-4 md:p-5 shadow-[0_3px_10px] shadow-gray-500/10 space-y-8 transition-all hover:shadow-none">
+        <div className={`border ${selected ? 'border-primary':'border-border shadow-[0_3px_10px] shadow-gray-500/10'}  bg-white rounded-2xl overflow-hidden p-4 md:p-5 space-y-8 transition-all hover:shadow-none flex flex-col`}>
             {/* Header */}
             <div className="flex items-start justify-between">
-                <img src={ReactLogo} className="w-15 h-15 object-cover" alt="logo" />
-                <span className="px-3 py-1 border border-[#0EA5E9]/20 text-sm font-semibold bg-[#0EA5E9]/10 text-[#0EA5E9] tracking-wide rounded-full">Popular</span>
+                <TechnologyIcon icon={technology.icon} />
+                <span className="px-3 py-1 text-sm font-semibold tracking-wide rounded-full"
+                    style={{
+                        color: color,
+                        backgroundColor: `${color}15`,
+                        border: `1px solid ${color}33`,
+                    }}
+                >
+                    {technology.badge}
+                </span>
             </div>
 
             {/* Body */}
             <div className="space-y-3">
-                <h4 className="text-xl font-bold text-foreground ">ReactJs</h4>
-                <p className="text-foreground">A declarative, component-based JavaScript library for building modern user interfaces.</p>
+                <h4 className="text-xl font-bold text-foreground ">{technology.name}</h4>
+                <p className="text-foreground">{technology.description}</p>
             </div>
 
             {/* Footer */}
-            <div className="space-y-5">
+            <div className="space-y-5 mt-auto">
                 <div className="flex items-center justify-between">
-                    <span className="px-2.5 py-1 bg-gray-600/10 border border-border font-semibold tracking-wide rounded text-[15px]">Frontend</span>
-                    <p className="text-[15px] text-foreground font-semibold">Beginner-Friendly</p>
-                    <span className="font-bold text-[15px] flex items-center gap-1"><FaStar className="text-orange-400" /> 4.9</span>
+                    <span className="px-2.5 py-1 bg-gray-600/10 border border-border font-semibold tracking-wide rounded text-[15px]">{technology.category}</span>
+                    <p className="text-[15px] text-foreground font-semibold">{technology.level}</p>
+                    <span className="font-bold text-[15px] flex items-center gap-1"><FaStar className="text-orange-400" /> {technology.rating}</span>
                 </div>
 
-                <button type="button" className="w-full py-3 font-semibold bg-gray-900 transition-all hover:bg-gray-900/90 cursor-pointer text-white rounded-lg tracking-wide">Add To Stack</button>
+                <button type="button" disabled={selected ? true:false } onClick={()=>handleAddToStack(technology.id)} className="w-full py-3 font-semibold bg-gray-900 transition-all hover:bg-gray-900/90 cursor-pointer text-white rounded-lg tracking-wide disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-gray-900">Add To Stack</button>
             </div>
 
         </div>
