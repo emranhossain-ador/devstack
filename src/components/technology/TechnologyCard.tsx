@@ -41,8 +41,8 @@ const TechnologyCard = ({technology, selected, handleAddToStack}:TechnologyProps
             {/* Footer */}
             <div className="space-y-5 mt-auto">
                 <div className="flex items-center justify-between">
-                    <span className="px-2.5 py-1 bg-gray-600/10 border border-border font-semibold tracking-wide rounded text-[15px]">{technology.category}</span>
-                    <p className="text-[15px] text-foreground font-semibold">{technology.level}</p>
+                    <span className="px-2.5 py-1 bg-gray-600/10 border border-border font-semibold rounded text-[14px]">{technology.category}</span>
+                    <p className="text-[13px] text-foreground font-semibold">{technology.level}</p>
                     <span className="font-bold text-[15px] flex items-center gap-1"><FaStar className="text-orange-400" /> {technology.rating}</span>
                 </div>
 

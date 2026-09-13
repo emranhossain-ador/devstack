@@ -2,7 +2,7 @@ import FooterLogo from "../../assets/images/logo-text.png";
 
 const Footer = () => {
     return (
-        <div className="container mx-auto px-3 mt-12 md:mt-32 py-10 border-t border-border">
+        <div className="container mx-auto px-3 mt-12 lg:mt-32 py-10 border-t border-border">
            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 border-b border-border pb-10">
 
                 <div className="text-center md:text-start">
