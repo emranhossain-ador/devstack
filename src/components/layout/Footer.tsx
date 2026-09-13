@@ -2,20 +2,20 @@ import FooterLogo from "../../assets/images/logo-text.png";
 
 const Footer = () => {
     return (
-        <div className="container mx-auto px-3 mt-32 py-10 border-t border-border">
-           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 border-b border-border pb-10">
+        <div className="container mx-auto px-3 mt-12 md:mt-32 py-10 border-t border-border">
+           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 border-b border-border pb-10">
 
-                <div >
-                    <img src={FooterLogo} alt="logo" className="h-auto md:h-11 w-auto" />
+                <div className="text-center md:text-start">
+                    <img src={FooterLogo} alt="logo" className="h-auto mx-auto md:mx-0 md:h-11 w-auto" />
                     <p className="text-foreground/80 text-[15px] py-5">Curated tools, technologies, and resources for developers building modern software.</p>
-                    <div className="flex items-center gap-3.5">
+                    <div className="flex items-center justify-center md:justify-start gap-3.5">
                         <a href="" className="font-semibold text-[15px] text-sky-500 hover:text-sky-600">GitHub</a>
                         <a href="" className="font-semibold text-[15px] text-sky-500 hover:text-sky-600">Twitter</a>
                         <a href="" className="font-semibold text-[15px] text-sky-500 hover:text-sky-600">Linked</a>
                     </div>
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-3 hidden md:inline">
                     <h5 className="text-lg font-semibold text-foreground">Product</h5>
                     <ul className="space-y-3">
                         <li className="text-[15px] cursor-pointer w-fit font-medium text-foreground/85 transition-all hover:text-sky-500">Home</li>
@@ -24,7 +24,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-3 hidden md:inline">
                     <h5 className="text-lg font-semibold text-foreground">Company</h5>
                     <ul className="space-y-3">
                         <li className="text-[15px] cursor-pointer w-fit font-medium text-foreground/85 transition-all hover:text-sky-500">About</li>
@@ -33,7 +33,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-3 hidden md:inline">
                     <h5 className="text-lg font-semibold text-foreground">Legal</h5>
                     <ul className="space-y-3">
                         <li className="text-[15px] cursor-pointer w-fit font-medium text-foreground/85 transition-all hover:text-sky-500">Privacy Policy</li>

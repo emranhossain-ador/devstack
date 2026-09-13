@@ -34,8 +34,8 @@ const TechnologyGrid = ({technologies}:TechnologyProps) => {
 
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-4 md:gap-4">
-            <div className="col-span-3">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-4">
+            <div className="col-span-1 md:col-span-3">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {
                         technologyList.map((technology:TechnologyType)=> 
@@ -49,7 +49,7 @@ const TechnologyGrid = ({technologies}:TechnologyProps) => {
                     }
                 </div>
             </div>
-            <div className="col-span-1">
+            <div className="col-span-1 sticky top-0">
 
                 <StackPanel selectedTechnologyIds={selectedTechnologyIds} seTSelectedTechIds={seTSelectedTechnologyIds} selectedTechnologies={selectedTechnologies}/>
 

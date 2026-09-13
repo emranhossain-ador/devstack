@@ -16,7 +16,7 @@ const TechnologySection = () => {
 
     return (
         <section className="space-y-10 md:space-y-14">
-            <div>
+            <div className="text-center md:text-left">
                 <h1 className="text-2xl md:text-3xl font-bold text-foreground font-header">
                     Explore The 
                     <span className="text-primary"> Technologies</span>

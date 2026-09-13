@@ -27,7 +27,7 @@ const StackPanel = ({selectedTechnologies, selectedTechnologyIds, seTSelectedTec
     }
 
     return (
-        <div className="border border-border bg-white rounded-2xl overflow-hidden p-4 md:p-5 shadow-[0_3px_10px] shadow-gray-500/10 space-y-10">
+        <div className="border border-border sticky top-18 bg-white rounded-2xl overflow-hidden p-4 md:p-5 shadow-[0_3px_10px] shadow-gray-500/10 space-y-10">
                 {/* Header */}
             <div>
                 <h4 className="font-bold text-2xl text-foreground font-header">Your Stack</h4>

@@ -6,7 +6,7 @@ import { FiLogIn } from "react-icons/fi";
 
 const Navbar = () => {
     return (
-        <div className="sticky top-0 w-full bg-white border-b border-border">
+        <div className="sticky top-0 z-50 w-full bg-white border-b border-border">
             <div className="container mx-auto w-full py-2.5 px-3 flex items-center justify-between">
                 
                 <button type="button" className="px-2.5 py-2 border border-gray-500/30 rounded-lg bg-gray-500/10 transition-all hover:scale-105 cursor-pointer inline md:hidden">
@@ -16,10 +16,18 @@ const Navbar = () => {
 
                 <nav className="md:inline hidden">
                     <ul className="flex items-center gap-3.5">
-                        <li className="navLink">Home</li>
-                        <li className="navLink">Technologies</li>
-                        <li className="navLink">About</li>
-                        <li className="navLink">Contact</li>
+                        <li>
+                            <a href="" className="navLink">Home</a>
+                        </li>
+                        <li>
+                            <a href="" className="navLink">Technologies</a>
+                        </li>
+                        <li>
+                            <a href="" className="navLink">About</a>
+                        </li>
+                        <li>
+                            <a href="" className="navLink">Contact</a>
+                        </li>
                     </ul>
                 </nav>
 
