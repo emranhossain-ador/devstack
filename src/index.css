@@ -50,4 +50,10 @@
     @apply px-1.5 py-1 cursor-pointer font-semibold text-[15px] transition-all hover:text-primary;
   }
 
+  .container {
+      @media (width >= 80rem) {
+          max-width: 80rem !important;
+      }
+  }
+
 }
