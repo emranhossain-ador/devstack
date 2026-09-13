@@ -1,4 +1,4 @@
-Project Name: # 🚀 Dev Stack#
+Project Name: #Dev Stack
 
 Description:- Dev Stack is a modern React and TypeScript web application that helps developers explore, compare, and build their ideal technology stack. Users can browse popular technologies, view their details, and add technologies to their personalized stack.
 
